@@ -100,6 +100,9 @@ header .sub-title {
   font-weight: 300;
   margin-bottom: 5px;
 }
+header .header-tags {
+  line-height: 2.2em;
+}
 @media (min-width: 768px) {
   header {
     border-bottom: 3px solid #cf171f;
@@ -574,4 +577,5 @@ section#menu .item-description {
 section#menu .item-actions {
   margin: 10px 0;
   text-align: center;
+  padding: 10px 0;
 }
