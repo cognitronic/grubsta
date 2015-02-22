@@ -1,0 +1,4 @@
+www/vendors/
+coverage/
+node_modules/
+!www/vendors/theme/
