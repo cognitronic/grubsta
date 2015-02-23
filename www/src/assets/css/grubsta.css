@@ -103,6 +103,12 @@ header .sub-title {
 header .header-tags {
   line-height: 2.2em;
 }
+header .profile-button-actions {
+  text-align: center;
+}
+header .profile-button-actions .btn {
+  margin-bottom: 10px;
+}
 @media (min-width: 768px) {
   header {
     border-bottom: 3px solid #cf171f;
@@ -160,6 +166,8 @@ header .header-tags {
 }
 .navbar .navbar-nav {
   letter-spacing: 1px;
+  margin-top: -15px;
+  margin-bottom: -20px;
 }
 .navbar .navbar-nav li a:focus {
   outline: none;
@@ -189,8 +197,24 @@ header .header-tags {
   text-align: center;
 }
 .nav-search {
-  min-width: 350px;
+  min-width: 275px;
   max-width: 600px;
+}
+.navbar-toggle {
+  background-color: white;
+  color: #cf171f;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: white;
+  color: #cf171f;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #cf171f;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: transparent;
 }
 .input-group-addon {
   padding: 6px 12px;
@@ -247,10 +271,17 @@ section.success {
   }
   .nav-search-container {
     position: absolute;
-    width: 95%;
+    width: 80%;
     text-align: center;
     margin-top: 40px;
     margin-left: 15px;
+    z-index: -1;
+  }
+  .navbar .navbar-nav {
+    letter-spacing: 1px;
+    margin: 0;
+    padding-bottom: 50px;
+    z-index: 6000;
   }
 }
 #portfolio .portfolio-item {
@@ -385,8 +416,8 @@ footer .footer-below {
 }
 footer .info-list {
   list-style: none;
-  text-align: left;
-  margin-left: 20px;
+  text-align: center;
+  padding-left: 0;
 }
 footer .info-list a {
   color: white;
@@ -513,6 +544,7 @@ footer .info-list a {
   padding: 5px;
   margin-right: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 .btn {
   font-weight: 700;
@@ -532,13 +564,14 @@ footer .info-list a {
 section#menu {
   background-color: #e5e5e5;
   margin-bottom: 50px;
-  padding: 25px;
+  padding: 25px 0;
 }
 section#menu .item-container {
   padding: 5px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 25px;
 }
 section#menu h3 {
   text-align: center;
@@ -578,4 +611,7 @@ section#menu .item-actions {
   margin: 10px 0;
   text-align: center;
   padding: 10px 0;
+}
+section#menu .item-actions .btn {
+  margin-bottom: 10px;
 }

@@ -117,6 +117,13 @@ header {
     .header-tags{
       line-height: 2.2em;
     }
+
+    .profile-button-actions {
+      text-align: center;
+      .btn{
+        margin-bottom: 10px;
+      }
+    }
 }
 
 @media(min-width:768px) {
@@ -179,6 +186,8 @@ header {
 	}
 	.navbar-nav {
 		letter-spacing: 1px;
+        margin-top: -15px;
+        margin-bottom: -20px;
 		li {
 			a:focus {
 				outline: none;
@@ -215,8 +224,26 @@ header {
 }
 
 .nav-search{
-  min-width: 350px;
+  min-width: 275px;
   max-width: 600px;
+}
+
+.navbar-toggle{
+  background-color: white;
+  color: @brand-primary;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: white;
+  color: @brand-primary;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: @brand-primary;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: transparent;
 }
 
 .input-group-addon {
@@ -277,10 +304,18 @@ section.success {
 	}
   .nav-search-container {
     position: absolute;
-    width: 95%;
+    width: 80%;
     text-align: center;
     margin-top: 40px;
     margin-left: 15px;
+    z-index: -1;
+  }
+
+  .navbar .navbar-nav {
+    letter-spacing: 1px;
+    margin: 0;
+    padding-bottom: 50px;
+    z-index: 6000;
   }
 }
 
@@ -430,8 +465,8 @@ footer {
 	}
     .info-list{
       list-style: none;
-      text-align: left;
-      margin-left: 20px;
+      text-align: center;
+      padding-left: 0;
       a {
         color: white;
       }
@@ -570,6 +605,7 @@ footer {
   padding: 5px;
   margin-right: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 
 .btn{
@@ -593,12 +629,13 @@ footer {
 section#menu {
   background-color: @primary-background-color;
   margin-bottom: 50px;
-  padding: 25px;
+  padding: 25px 0;
   .item-container{
     padding: 5px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 25px;
   }
   h3 {
     text-align: center;
@@ -645,5 +682,8 @@ section#menu {
     margin: 10px 0;
     text-align: center;
     padding: 10px 0;
+    .btn {
+      margin-bottom: 10px;
+    }
   }
 }
