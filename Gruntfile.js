@@ -32,6 +32,7 @@ module.exports = function (grunt) {
                     served: true,
                     included: false
                 },
+	            'www/src/modules.js',
                 'www/src/app.js',
                 'www/src/**/*.spec.js'
             ]
@@ -80,18 +81,13 @@ module.exports = function (grunt) {
 
         concat: {
             dist: {
-                src: ['www/src/config.js',
-	                'www/src/module.js',
-	                'www/src/module-services.js',
+                src: [
+	                'www/src/modules.js',
 	                'www/src/app.js',
 	                'www/src/**/*.js',
 	                '!www/src/**/*.spec.js'],
                 dest: 'dist/<%= pkg.namelower %>-<%= pkg.version %>.js'
             },
-	        dist_services: {
-		        src: ['www/src/module-services.js', 'www/src/**/*-service.js', '!www/src/core/security/login-service.js'],
-		        dest: 'dist/<%= pkg.namelower %>-services-<%= pkg.version %>.js'
-	        },
             dist_css: {
                 src:['www/src/assets/css/**/*.css', '!www/src/assets/css/<%= pkg.namelower %>-<%= pkg.version %>.*'],
                 dest:'dist/<%= pkg.namelower %>-<%= pkg.version %>.css'
@@ -149,10 +145,8 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'jshint',
         'concat',
-	    'concat:dist_services',
         'concat:dist_css',
         'uglify:dist',
-	    'uglify:dist_services',
         'cssmin:dist_css',
         'copy:dist'
     ]);
@@ -161,11 +155,9 @@ module.exports = function (grunt) {
             'jshint',
             'karma:development',
             'concat',
-	        'concat:dist_services',
             'concat:dist_css',
             'karma:dist',
             'uglify:dist',
-	        'uglify:dist_services',
             'karma:minified',
             'cssmin:dist_css',
             'copy:dist',
