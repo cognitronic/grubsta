@@ -572,6 +572,7 @@ section#menu .item-container {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 25px;
+  box-shadow: #888888 2px 2px 5px;
 }
 section#menu h3,
 section#menu h4 {
