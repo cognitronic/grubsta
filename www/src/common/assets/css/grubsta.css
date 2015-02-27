@@ -572,7 +572,7 @@ section#menu .item-container {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 25px;
-  box-shadow: #888888 2px 2px 5px;
+  box-shadow: #888888 1px 2px 5px;
 }
 section#menu h3,
 section#menu h4 {
@@ -644,6 +644,8 @@ header#landing .filters-container {
   margin-top: 5px;
   background-color: white;
   border-radius: 5px;
+  text-align: center;
+  width: 100%;
   padding: 15px;
   box-shadow: #888888 1px 1px 1px;
 }
@@ -652,7 +654,8 @@ header#landing .filters-container input {
   border: 1px #ececec solid;
   line-height: 2em;
   padding: 5px;
-  width: 250px;
+  width: 100%;
+  margin: 5px 0;
 }
 header#landing .filters-container img {
   height: 200px;
