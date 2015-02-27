@@ -281,6 +281,7 @@ section.success {
     margin: 0;
     padding-bottom: 50px;
     z-index: 6000;
+    float: right;
   }
 }
 #portfolio .portfolio-item {
