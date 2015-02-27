@@ -572,12 +572,14 @@ section#menu .item-container {
   border-radius: 5px;
   margin-bottom: 25px;
 }
-section#menu h3 {
+section#menu h3,
+section#menu h4 {
   text-align: center;
-  color: #cf171f;
+  color: #2e2e2e;
 }
 section#menu .img-container {
-  border-bottom: 3px solid #cf171f;
+  border-bottom: 2px solid #cf171f;
+  padding: 0;
 }
 section#menu .main-img {
   box-shadow: #888888 1px 1px 1px;
@@ -604,7 +606,11 @@ section#menu .menu-item-thumbnail {
 }
 section#menu .item-description {
   margin-top: 10px;
-  border-bottom: 3px solid #ececec;
+  color: #5c5e5f;
+  border-bottom: 1px dashed #ececec;
+}
+section#menu .item-description p {
+  font-size: 1.3em;
 }
 section#menu .item-actions {
   margin: 10px 0;
@@ -613,4 +619,82 @@ section#menu .item-actions {
 }
 section#menu .item-actions .btn {
   margin-bottom: 10px;
+}
+section#menu .posted-item-location {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #5C5E5F;
+}
+section#menu .posted-item-cook-img {
+  height: 75px;
+  width: 75px;
+  margin-top: -45px;
+}
+/* ------------------------- Feed -------------------------- */
+header#landing {
+  border-bottom: none;
+}
+header#landing .container {
+  padding-top: 100px;
+  padding-bottom: 5px;
+}
+header#landing .filters-container {
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: #888888 1px 1px 1px;
+}
+header#landing .filters-container input {
+  border-radius: 5px;
+  border: 1px #ececec solid;
+  line-height: 2em;
+  padding: 5px;
+  width: 250px;
+}
+header#landing .filters-container img {
+  height: 200px;
+}
+section#feed {
+  border-bottom: 25px solid #cf171f;
+  text-align: left;
+  background: #e5e5e5;
+  color: #ffffff;
+}
+section#feed .container {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+section#feed .item-description {
+  background-color: #cf171f;
+  color: white;
+}
+section#feed .item-description p {
+  font-size: .75em;
+}
+.main-container.ng-enter {
+  -webkit-transition: 0.6s linear all;
+  -moz-transition: all 0.6s linear;
+  transition: 0.6s linear all;
+  transition-delay: 0.2s;
+  position: relative;
+  z-index: 100;
+  top: 100%;
+  opacity: 0;
+}
+.main-container.ng-enter.ng-enter-active {
+  top: 0;
+  opacity: 1;
+}
+.main-container.ng-leave {
+  -webkit-transition: 0.6s linear all;
+  -moz-transition: all 0.6s linear;
+  transition: 0.6s linear all;
+  transition-delay: 0.2s;
+  top: 0;
+  opacity: 1;
+}
+.main-container.ng-leave.ng-leave-active {
+  top: -100%;
+  opacity: 0;
 }

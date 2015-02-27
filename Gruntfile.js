@@ -89,7 +89,7 @@ module.exports = function (grunt) {
                 dest: 'dist/<%= pkg.namelower %>-<%= pkg.version %>.js'
             },
             dist_css: {
-                src:['www/src/assets/css/**/*.css', '!www/src/assets/css/<%= pkg.namelower %>-<%= pkg.version %>.*'],
+                src:['www/src/common/assets/css/**/*.css', '!www/src/common/assets/css/<%= pkg.namelower %>-<%= pkg.version %>.*'],
                 dest:'dist/<%= pkg.namelower %>-<%= pkg.version %>.css'
             }
         },
@@ -128,7 +128,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/',
                         src: ['<%= pkg.namelower %>-<%= pkg.version %>.css','<%= pkg.namelower %>-<%= pkg.version %>.min.css'],
-                        dest: 'www/src/assets/css/'
+                        dest: 'www/src/common/assets/css/'
                     }
                 ]
             }

@@ -78,6 +78,35 @@ angular.module('grubsta.services', [
  * Created by Danny Schreiber on 2/25/2015.
  */
 
+(function(){ 'use strict';
+	var fixContainer = function() {
+
+		var link = function (scope, element, attrs) {
+
+			function resizeContainers(containerId) {
+				var heights = $(containerId).map(function () {
+						return $(this).height();
+					}).get(),
+
+					maxHeight = Math.max.apply(null, heights) * 2;
+
+				$(containerId).height(maxHeight);
+			}
+			resizeContainers(element);
+		};
+		return {
+			restrict: 'EA',
+			link: link
+		};
+	};
+
+	angular.module('grubsta').directive('fixContainer', [fixContainer]);
+
+})();
+/**
+ * Created by Danny Schreiber on 2/25/2015.
+ */
+
 (function(){
 	'use strict';
 	angular.module('grubsta.core').constant('Constants', {
@@ -114,23 +143,53 @@ angular.module('grubsta.services', [
 	angular.module('grubsta').controller('HeaderController', ['$state', HeaderController]);
 })();
 /**
+ * Created by Danny Schreiber on 2/26/2015.
+ */
+
+(function(){ 'use strict';
+    var MealFeedService = function(RestService, $http, $q){
+
+	    var _getPublicFeed = function(){
+
+		    var deferred = $q.defer();
+
+		    $http.jsonp("http://www.filltext.com/?callback=JSON_CALLBACK&rows=5&fname={firstName}&lname={lastName}").
+			    success(function (data) {
+				    deferred.resolve(data);
+			    });
+		    return deferred.promise;
+
+	    };
+
+		return{
+			getPublicFeed: _getPublicFeed
+		};
+    };
+	angular.module('grubsta.services').factory('MealFeedService', ['RestService', '$http', '$q', MealFeedService]);
+})();
+/**
  * Created by Danny Schreiber on 2/25/2015.
  */
 
 (function(){ 'use strict';
-    var HeaderController = function(){
+    var HomeController = function(MealFeedService){
 		var hc = this;
+		hc.feed = [];
 
 	    hc.init = init;
 
 	    init();
 
 	    function init(){
-
+			MealFeedService.getPublicFeed()
+		        .then(function(data){
+					console.log(data);
+					hc.feed = data;
+				});
 	    }
     };
 
-	angular.module('grubsta.core').controller('HeaderController', [HeaderController]);
+	angular.module('grubsta.core').controller('HomeController', ['MealFeedService', HomeController]);
 
 })();
 /**
