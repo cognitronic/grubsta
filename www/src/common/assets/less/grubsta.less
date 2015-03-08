@@ -77,12 +77,16 @@ hr{
 	margin: 0 auto;
 }
 
+.container-fluid {
+  max-width: 1600px;
+}
+
 header {
     border-bottom: 3px solid @brand-primary;
 	text-align: left;
 	background: @brand-success;
 	color: #333333;
-	.container {
+	.container-fluid {
 		padding-top: 100px;
 		padding-bottom: 50px;
 	}
@@ -129,7 +133,7 @@ header {
 @media(min-width:768px) {
 	header {
         border-bottom: 3px solid @brand-primary;
-		.container {
+		.container-fluid {
 			padding-top: 150px;
 			padding-bottom: 50px;
 		}
@@ -259,7 +263,7 @@ header {
   text-align: center;
   background-color: @primary-background-color;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -595,7 +599,7 @@ footer {
 .rating-star{
   color: @color-white;
   padding: 3px;
-  border-radius: 5px;
+  border-radius: 3px;
   display: inline-block;
   font-size: 1.25em;
   background-color: @brand-primary;
@@ -606,7 +610,7 @@ footer {
   color: white;
   padding: 5px;
   margin-right: 5px;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
 }
 
@@ -616,13 +620,13 @@ footer {
 
 .profile-img{
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 10px;
   margin-bottom: 20px;
   img{
     height: 100%;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
   }
 }
 
@@ -635,10 +639,9 @@ section#menu {
   .item-container{
     padding: 5px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 25px;
-    box-shadow: #888888 1px 2px 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
   }
   h3,h4 {
     text-align: center;
@@ -653,8 +656,8 @@ section#menu {
   }
 
   .main-img{
-    box-shadow: #888888 1px 1px 1px;
-    border-radius: 4px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+    border-radius: 3px;
     width: 100%;
     height: 100%;
   }
@@ -676,7 +679,7 @@ section#menu {
   .menu-item-thumbnail{
     width: 75px;
     height: 75px;
-    border-radius: 5px;
+    border-radius: 3px;
   }
 
   .item-description {
@@ -684,7 +687,7 @@ section#menu {
     color: @content-gray;
     border-bottom: 1px dashed @gray-lighter;
     p{
-      font-size: 1.3em;
+      font-size: 1.1em;
     }
   }
 
@@ -714,7 +717,7 @@ section#menu {
 
 header#landing{
   border-bottom: none;
-  .container{
+  .container-fluid {
     padding-top: 100px;
     padding-bottom: 5px;
   }
@@ -722,13 +725,13 @@ header#landing{
   .filters-container{
     margin-top: 5px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: center;
     width: 100%;
     padding: 15px;
-    box-shadow: #888888 1px 1px 1px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
     input{
-      border-radius: 5px;
+      border-radius: 3px;
       border: 1px @gray-lighter solid;
       line-height: 2em;
       padding: 5px;
@@ -746,7 +749,7 @@ section#feed{
   text-align: left;
   background: @brand-success;
   color: #ffffff;
-  .container {
+  .container-fluid {
     padding-top: 100px;
     padding-bottom: 0;
 //    background-image: url('http://localhost:3002/src/assets/img/portfolio/mebg.jpg');
@@ -791,4 +794,12 @@ section#feed{
 .main-container.ng-leave.ng-leave-active{
   top: -100%;
   opacity: 0;
+}
+
+.left-sidebar-container{
+  padding-left: 0;
+}
+
+.right-sidebar-container{
+  padding-right: 0;
 }

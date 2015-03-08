@@ -68,13 +68,16 @@ hr {
 .img-centered {
   margin: 0 auto;
 }
+.container-fluid {
+  max-width: 1600px;
+}
 header {
   border-bottom: 3px solid #cf171f;
   text-align: left;
   background: #e5e5e5;
   color: #333333;
 }
-header .container {
+header .container-fluid {
   padding-top: 100px;
   padding-bottom: 50px;
 }
@@ -113,7 +116,7 @@ header .profile-button-actions .btn {
   header {
     border-bottom: 3px solid #cf171f;
   }
-  header .container {
+  header .container-fluid {
     padding-top: 150px;
     padding-bottom: 50px;
   }
@@ -228,7 +231,7 @@ header .profile-button-actions .btn {
   text-align: center;
   background-color: #e5e5e5;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
 }
 section {
@@ -533,7 +536,7 @@ footer .info-list a {
 .rating-star {
   color: #ffffff;
   padding: 3px;
-  border-radius: 5px;
+  border-radius: 3px;
   display: inline-block;
   font-size: 1.25em;
   background-color: #cf171f;
@@ -543,7 +546,7 @@ footer .info-list a {
   color: white;
   padding: 5px;
   margin-right: 5px;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
 }
 .btn {
@@ -551,14 +554,14 @@ footer .info-list a {
 }
 .profile-img {
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 10px;
   margin-bottom: 20px;
 }
 .profile-img img {
   height: 100%;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 /* ---------------- Profile Menu --------------------*/
 section#menu {
@@ -569,10 +572,9 @@ section#menu {
 section#menu .item-container {
   padding: 5px;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 3px;
   margin-bottom: 25px;
-  box-shadow: #888888 1px 2px 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
 }
 section#menu h3,
 section#menu h4 {
@@ -586,8 +588,8 @@ section#menu .img-container {
   padding: 0;
 }
 section#menu .main-img {
-  box-shadow: #888888 1px 1px 1px;
-  border-radius: 4px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  border-radius: 3px;
   width: 100%;
   height: 100%;
 }
@@ -606,7 +608,7 @@ section#menu ul li {
 section#menu .menu-item-thumbnail {
   width: 75px;
   height: 75px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 section#menu .item-description {
   margin-top: 10px;
@@ -614,7 +616,7 @@ section#menu .item-description {
   border-bottom: 1px dashed #ececec;
 }
 section#menu .item-description p {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 section#menu .item-actions {
   margin: 10px 0;
@@ -638,21 +640,21 @@ section#menu .posted-item-cook-img {
 header#landing {
   border-bottom: none;
 }
-header#landing .container {
+header#landing .container-fluid {
   padding-top: 100px;
   padding-bottom: 5px;
 }
 header#landing .filters-container {
   margin-top: 5px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
   width: 100%;
   padding: 15px;
-  box-shadow: #888888 1px 1px 1px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
 }
 header#landing .filters-container input {
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px #ececec solid;
   line-height: 2em;
   padding: 5px;
@@ -668,7 +670,7 @@ section#feed {
   background: #e5e5e5;
   color: #ffffff;
 }
-section#feed .container {
+section#feed .container-fluid {
   padding-top: 100px;
   padding-bottom: 0;
 }
@@ -704,6 +706,12 @@ section#feed .item-description p {
 .main-container.ng-leave.ng-leave-active {
   top: -100%;
   opacity: 0;
+}
+.left-sidebar-container {
+  padding-left: 0;
+}
+.right-sidebar-container {
+  padding-right: 0;
 }
 
 /*-------------- COLORS --------------*/
