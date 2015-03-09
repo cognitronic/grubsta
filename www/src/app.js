@@ -4,8 +4,14 @@
 
 (function(){
 	'use strict';
-	angular.module('grubsta', ['grubsta.core'])
-		.config(function($httpProvider, $stateProvider, $locationProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
+	angular.module('grubsta', ['grubsta.core', 'uiGmapgoogle-maps'])
+		.config(function($httpProvider, $stateProvider, $locationProvider, $urlRouterProvider, $urlMatcherFactoryProvider, uiGmapGoogleMapApiProvider) {
+
+			uiGmapGoogleMapApiProvider.configure({
+				key: 'AIzaSyDv-kWpcHz1JE2tFT9Sle1N5_w7kJYD52E',
+				v: '3.17',
+				libraries: 'weather, geometry, visualization'
+			});
 			$urlMatcherFactoryProvider.strictMode(false);
 			$locationProvider.html5Mode(true);
 			$httpProvider.defaults.transformRequest = function (data) {

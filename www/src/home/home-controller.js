@@ -6,8 +6,9 @@
     var HomeController = function(MealFeedService){
 		var hc = this;
 		hc.feed = [];
-
+		hc.map = {};
 	    hc.init = init;
+	    hc.loadMap = loadMap;
 
 	    init();
 
@@ -17,6 +18,12 @@
 					console.log(data);
 					hc.feed = data;
 				});
+
+		    hc.loadMap();
+	    }
+
+	    function loadMap(){
+		    hc.map = {center: {latitude: 51.219053, longitude: 4.404418 }, zoom: 14 };
 	    }
     };
 

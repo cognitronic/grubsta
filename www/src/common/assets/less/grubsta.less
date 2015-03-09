@@ -711,6 +711,76 @@ section#menu {
     width: 75px;
     margin-top: -45px;
   }
+
+  .left-sidebar-container{
+    padding-left: 0;
+    input{
+      border-radius: 3px;
+      border: 1px @gray-lighter solid;
+      line-height: 2em;
+      padding: 5px;
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+
+  .search-item h5 {
+    text-transform: none;
+  }
+
+  .right-sidebar-container {
+    padding-right: 0;
+
+    .footer {
+      margin: 10px 0;
+      text-align: center;
+      padding: 10px 0;
+      .btn {
+        margin-bottom: 10px;
+      }
+      a {
+        color: @brand-primary;
+      }
+    }
+  }
+
+  .angular-google-map-container{
+    width: 368px;
+    height: 244px;
+  }
+
+  .recommended-header{
+    h5{
+      text-align: center;
+      padding-bottom: 5px;
+      border-bottom: 1px dashed @gray-lighter;
+    }
+  }
+
+  .recommended-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 200px;
+  }
+
+  .recommended-item {
+    padding: 5px;
+    border-bottom: 1px dashed @gray-lighter;
+    color: @gray-darker;
+  }
+
+  .recommended-profile-img {
+    margin-top: 8px;
+  }
+
+  small {
+    color: @content-gray;
+  }
+
+  h6 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 /* ------------------------- Feed -------------------------- */
@@ -796,10 +866,3 @@ section#feed{
   opacity: 0;
 }
 
-.left-sidebar-container{
-  padding-left: 0;
-}
-
-.right-sidebar-container{
-  padding-right: 0;
-}
