@@ -20,8 +20,14 @@ angular.module('grubsta.services', [
 
 (function(){
 	'use strict';
-	angular.module('grubsta', ['grubsta.core'])
-		.config(function($httpProvider, $stateProvider, $locationProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
+	angular.module('grubsta', ['grubsta.core', 'uiGmapgoogle-maps'])
+		.config(function($httpProvider, $stateProvider, $locationProvider, $urlRouterProvider, $urlMatcherFactoryProvider, uiGmapGoogleMapApiProvider) {
+
+			uiGmapGoogleMapApiProvider.configure({
+				key: 'AIzaSyDv-kWpcHz1JE2tFT9Sle1N5_w7kJYD52E',
+				v: '3.17',
+				libraries: 'weather, geometry, visualization'
+			});
 			$urlMatcherFactoryProvider.strictMode(false);
 			$locationProvider.html5Mode(true);
 			$httpProvider.defaults.transformRequest = function (data) {
@@ -175,8 +181,9 @@ angular.module('grubsta.services', [
     var HomeController = function(MealFeedService){
 		var hc = this;
 		hc.feed = [];
-
+		hc.map = {};
 	    hc.init = init;
+	    hc.loadMap = loadMap;
 
 	    init();
 
@@ -186,6 +193,12 @@ angular.module('grubsta.services', [
 					console.log(data);
 					hc.feed = data;
 				});
+
+		    hc.loadMap();
+	    }
+
+	    function loadMap(){
+		    hc.map = {center: {latitude: 51.219053, longitude: 4.404418 }, zoom: 14 };
 	    }
     };
 

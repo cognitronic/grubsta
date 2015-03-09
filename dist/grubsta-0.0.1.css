@@ -636,6 +636,63 @@ section#menu .posted-item-cook-img {
   width: 75px;
   margin-top: -45px;
 }
+section#menu .left-sidebar-container {
+  padding-left: 0;
+}
+section#menu .left-sidebar-container input {
+  border-radius: 3px;
+  border: 1px #ececec solid;
+  line-height: 2em;
+  padding: 5px;
+  width: 100%;
+  margin: 5px 0;
+}
+section#menu .search-item h5 {
+  text-transform: none;
+}
+section#menu .right-sidebar-container {
+  padding-right: 0;
+}
+section#menu .right-sidebar-container .footer {
+  margin: 10px 0;
+  text-align: center;
+  padding: 10px 0;
+}
+section#menu .right-sidebar-container .footer .btn {
+  margin-bottom: 10px;
+}
+section#menu .right-sidebar-container .footer a {
+  color: #cf171f;
+}
+section#menu .angular-google-map-container {
+  width: 368px;
+  height: 244px;
+}
+section#menu .recommended-header h5 {
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #ececec;
+}
+section#menu .recommended-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 200px;
+}
+section#menu .recommended-item {
+  padding: 5px;
+  border-bottom: 1px dashed #ececec;
+  color: #2e2e2e;
+}
+section#menu .recommended-profile-img {
+  margin-top: 8px;
+}
+section#menu small {
+  color: #5c5e5f;
+}
+section#menu h6 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 /* ------------------------- Feed -------------------------- */
 header#landing {
   border-bottom: none;
@@ -706,12 +763,6 @@ section#feed .item-description p {
 .main-container.ng-leave.ng-leave-active {
   top: -100%;
   opacity: 0;
-}
-.left-sidebar-container {
-  padding-left: 0;
-}
-.right-sidebar-container {
-  padding-right: 0;
 }
 
 /*-------------- COLORS --------------*/
