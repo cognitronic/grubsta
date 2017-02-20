@@ -31,7 +31,7 @@ module.exports = function(app, config){
         resave: false,
         saveUninitialized: true
     }));
-    app.use(express.static(path.join(config.rootPath, '/www')));
+    app.use(express.static(path.join(__dirname, '../../www')));
     app.use(cookieParser());
     app.use(bodyParser.urlencoded({
         extended: true
