@@ -9,7 +9,7 @@ module.exports = {
     development: {
         rootPath: rootPath,
         baseUrl: 'http://localhost:3002',
-        db: 'mongodb://dannyschreiber.net/chowlio',
+        db: 'mongodb://heroku_app33803161:hf0ai7fhuiroib66egrflg7h28@ds041851.mongolab.com:41851/heroku_app33803161',
         port: process.env.PORT || 3002
     },
     production: {

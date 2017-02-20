@@ -4,6 +4,7 @@
 
 var auth = require('../controllers/auth');
 var index = require('../controllers/index');
+var path = require('path');
 var express = require('express');
 
 module.exports = function(app){
